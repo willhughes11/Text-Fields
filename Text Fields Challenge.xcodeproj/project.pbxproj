@@ -14,6 +14,7 @@
 		CCE576722511905C0038B2D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE576712511905C0038B2D9 /* Assets.xcassets */; };
 		CCE576752511905C0038B2D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE576732511905C0038B2D9 /* LaunchScreen.storyboard */; };
 		CCE57681251196780038B2D9 /* ZipCodeFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE57680251196780038B2D9 /* ZipCodeFieldDelegate.swift */; };
+		CCE576832511A0360038B2D9 /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE576822511A0360038B2D9 /* CashTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CCE576742511905C0038B2D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCE576762511905C0038B2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE57680251196780038B2D9 /* ZipCodeFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeFieldDelegate.swift; sourceTree = "<group>"; };
+		CCE576822511A0360038B2D9 /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				CCE57680251196780038B2D9 /* ZipCodeFieldDelegate.swift */,
+				CCE576822511A0360038B2D9 /* CashTextFieldDelegate.swift */,
 			);
 			name = "Text Field Delegates";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				CCE5766D251190580038B2D9 /* ViewController.swift in Sources */,
 				CCE57669251190580038B2D9 /* AppDelegate.swift in Sources */,
+				CCE576832511A0360038B2D9 /* CashTextFieldDelegate.swift in Sources */,
 				CCE5766B251190580038B2D9 /* SceneDelegate.swift in Sources */,
 				CCE57681251196780038B2D9 /* ZipCodeFieldDelegate.swift in Sources */,
 			);

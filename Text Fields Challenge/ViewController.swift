@@ -10,20 +10,44 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    let zipCodeDelegate = ZipCodeFieldDelegate()
+    let cashTextDelegate = CashTextFieldDelegate()
+    
     // MARK: Outlets
     @IBOutlet weak var zipField: UITextField!
     @IBOutlet weak var cashField: UITextField!
     @IBOutlet weak var lockableField: UITextField!
     @IBOutlet weak var textFieldLock: UISwitch!
-    
-    let zipCodeDelegate = ZipCodeFieldDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         self.zipField.delegate = zipCodeDelegate
+        self.cashField.delegate = cashTextDelegate
+        self.lockableField.delegate = self
+        
+        self.textFieldLock.setOn(false, animated: false)
     }
+    
+       func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+           return self.textFieldLock.isOn
+       }
+       
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+           
+           return true;
+       }
+    
+       // MARK: Actions
+       
+       @IBAction func toggleTheTextEditor(_ sender: AnyObject) {
+           
+           if !(sender as! UISwitch).isOn {
+               self.lockableField.resignFirstResponder()
+           }
+       }
+
 
 
 }
