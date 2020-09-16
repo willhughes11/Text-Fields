@@ -11,4 +11,17 @@ import UIKit
 
 class ZipCodeFieldDelegate : NSObject, UITextFieldDelegate {
         
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+            let maxLength = 5
+            let currentString: NSString = (textField.text ?? "") as NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+            
+            if (string.rangeOfCharacter(from: invalidCharacters) == nil) {
+                return (newString.length <= maxLength)
+            } else {
+                return false
+            }
+        }
 }
